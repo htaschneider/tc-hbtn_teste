@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TesteEmail {
 
@@ -16,6 +17,6 @@ public class TesteEmail {
 
     @Test
     public static void testar_email_mais_50_caracteres() {
-        assertFalse(Pessoa.emailValid("email_teste_muito_longo_nao_deve_ser_valido@dominio.com.br"));
+        assertEquals(Pessoa.emailValid("email_teste_muito_longo_nao_deve_ser_valido@dominio.com.br"), false);
     }
 }
